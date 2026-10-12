@@ -15,7 +15,13 @@ $config = file_exists(__DIR__ . '/config.local.php')
     : require __DIR__ . '/config.php';
 
 try {
-    $dsn = sprintf('mysql:host=%s;dbname=%s;charset=%s', $config['host'], $config['database'], $config['charset']);
+       $dsn = sprintf(
+        'mysql:host=%s;port=%s;dbname=%s;charset=%s',
+        $config['host'],
+        $config['port'] ?? '3306',
+        $config['database'],
+        $config['charset']
+    );
     $pdo = new PDO($dsn, $config['username'], $config['password'], [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
