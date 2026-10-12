@@ -142,7 +142,7 @@ function selected(bool $value): string { return $value ? ' selected' : ''; }
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de ventas | CRUD</title>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script>
@@ -182,7 +182,7 @@ function selected(bool $value): string { return $value ? ' selected' : ''; }
 <body>
 <div data-role="page" id="inicio">
     <div data-role="header"><a href="inicio.html" data-ajax="false" data-icon="home">Portada</a><h1 class="brand">Sistema de ventas</h1></div>
-    <div class="hero"><div class="content hero-inner"><div><p class="eyebrow">Hola Mundo</p><h1>Panel de control</h1><p>Administra usuarios, productos y ventas desde una interfaz ligera compatible con hosting compartido.</p></div><img class="profile-photo" src="assets/mi_foto.jpeg" alt="Foto personal"></div></div>
+    <div class="hero"><div class="content hero-inner"><div><p class="eyebrow">Hola Mundo</p><h1>Panel de control</h1><p>Administra usuarios, productos y ventas desde una interfaz ligera compatible con hosting compartido.</p></div><img class="profile-photo" src="mi_foto.jpeg" alt="Foto personal"></div></div>
     <main class="content">
         <?php if ($flash): ?><div class="notice<?= $flash['type'] === 'error' ? ' error' : '' ?>"><?= e($flash['message']) ?></div><?php endif; ?>
         <section class="panel location-panel">
