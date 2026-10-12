@@ -1,9 +1,9 @@
 <?php
-$host = getenv('sakura.proxy.rlwy.net ');
-$port = (int) getenv('12790');
-$user = getenv('root');
-$pass = getenv('sAwfZqqzLnHOxiVrTtfbAbKyHpImHglz ');
-$name = getenv('Sistema');
+$host = getenv('DB_HOST');
+$port = (int) getenv('DB_PORT');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$name = getenv('DB_NAME');
 
 $conexion = new mysqli($host, $user, $pass, $name, $port);
 if ($conexion->connect_error) {
