@@ -1,0 +1,7 @@
+Options -Indexes
+
+<FilesMatch "^(config|config\.local|functions)\.php$">
+    Require all denied
+</FilesMatch>
+
+DirectoryIndex inicio.html index.php
